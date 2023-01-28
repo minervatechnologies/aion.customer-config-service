@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aion.CustomerConfigService.Api", "Aion.CustomerConfigService.Api\Aion.CustomerConfigService.Api.csproj", "{EB502D08-4EAC-42FC-BDF5-EA0D54DAFC02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aion.CustomerConfigService.Domain", "Aion.CustomerConfigService.Domain\Aion.CustomerConfigService.Domain.csproj", "{BF9C0CFE-F7E2-49DE-86CE-94ABC57E6AF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB502D08-4EAC-42FC-BDF5-EA0D54DAFC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB502D08-4EAC-42FC-BDF5-EA0D54DAFC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB502D08-4EAC-42FC-BDF5-EA0D54DAFC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB502D08-4EAC-42FC-BDF5-EA0D54DAFC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9C0CFE-F7E2-49DE-86CE-94ABC57E6AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9C0CFE-F7E2-49DE-86CE-94ABC57E6AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9C0CFE-F7E2-49DE-86CE-94ABC57E6AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9C0CFE-F7E2-49DE-86CE-94ABC57E6AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FD3D2F6-8687-4AC9-B82E-1502CBB35BE4}
+	EndGlobalSection
+EndGlobal
