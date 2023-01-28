@@ -8,8 +8,12 @@
 
   <ItemGroup>
     <None Remove="Entities\" />
+    <None Remove="Common\" />
+    <None Remove="Enums\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
+    <Folder Include="Common\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>
