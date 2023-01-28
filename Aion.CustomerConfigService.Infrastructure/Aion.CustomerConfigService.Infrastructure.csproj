@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Aion.CustomerConfigService.Application\Aion.CustomerConfigService.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Persistence\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistence\" />
+  </ItemGroup>
 </Project>

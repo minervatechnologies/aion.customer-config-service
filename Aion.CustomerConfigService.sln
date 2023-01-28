@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aion.CustomerConfigService.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aion.CustomerConfigService.Infrastructure", "Aion.CustomerConfigService.Infrastructure\Aion.CustomerConfigService.Infrastructure.csproj", "{B3A19A84-0656-447F-BD40-B8B0CC1C2C22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aion.CustomerConfigService.Application", "Aion.CustomerConfigService.Application\Aion.CustomerConfigService.Application.csproj", "{85282FCB-0A40-433B-B829-2DC99F957BFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B3A19A84-0656-447F-BD40-B8B0CC1C2C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3A19A84-0656-447F-BD40-B8B0CC1C2C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3A19A84-0656-447F-BD40-B8B0CC1C2C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85282FCB-0A40-433B-B829-2DC99F957BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85282FCB-0A40-433B-B829-2DC99F957BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85282FCB-0A40-433B-B829-2DC99F957BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85282FCB-0A40-433B-B829-2DC99F957BFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

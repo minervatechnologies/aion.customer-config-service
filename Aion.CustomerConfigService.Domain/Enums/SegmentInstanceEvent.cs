@@ -9,4 +9,3 @@ namespace Aion.CustomerConfigService.Domain.Enums
 		Inactive
 	}
 }
-

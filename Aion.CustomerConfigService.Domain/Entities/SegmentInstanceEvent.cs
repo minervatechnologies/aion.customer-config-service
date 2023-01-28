@@ -3,8 +3,8 @@ using Aion.CustomerConfigService.Domain.Enums;
 
 namespace Aion.CustomerConfigService.Domain.Entities;
 
-public class CustomerSegmentInstanceEvent : BaseEntity
+public class SegmentInstanceEvent : BaseEntity
 {
-    public SegmentInstanceEvent SegmentInstanceEvent { get; } 
+    public Enums.SegmentInstanceEvent SegmentInstanceEvent { get; } 
 }
 

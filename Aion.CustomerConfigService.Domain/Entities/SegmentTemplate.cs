@@ -1,9 +1,9 @@
 ﻿using System;
 namespace Aion.CustomerConfigService.Domain.Entities;
 
-public class CustomerSegmentTemplate
+public class SegmentTemplate
 {
-	public CustomerSegmentTemplate()
+	public SegmentTemplate()
 	{
 	}
 }

@@ -3,9 +3,9 @@ using Aion.CustomerConfigService.Domain.Common;
 
 namespace Aion.CustomerConfigService.Domain.Entities;
 
-public class CustomerSegmentInstance : BaseEntity
+public class SegmentInstance : BaseEntity
 {
-    public CustomerSegmentInstance()
+    public SegmentInstance()
     {
     }
 
