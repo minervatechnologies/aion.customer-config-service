@@ -9,6 +9,6 @@ public class SegmentInstance : BaseEntity
     {
     }
 
-    public ICollection<CustomerSegmentInstanceEvent> CustomerSegmentInstanceEvents { get; }
+    public ICollection<SegmentInstanceEvent> CustomerSegmentInstanceEvents { get; }
 }
 
