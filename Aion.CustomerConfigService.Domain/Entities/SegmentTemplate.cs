@@ -1,4 +1,6 @@
 ﻿using System;
+using Aion.CustomerConfigService.Domain.Enums;
+
 namespace Aion.CustomerConfigService.Domain.Entities;
 
 public class SegmentTemplate
@@ -8,6 +10,6 @@ public class SegmentTemplate
 	}
 
     public string Channel { get; set; }
-    public int Yield { get; set; }
+    public string Name { get; set; }
+	public LoanBroker LoanBroker { get; set; }
 }
-
