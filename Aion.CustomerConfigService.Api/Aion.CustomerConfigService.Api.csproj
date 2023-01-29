@@ -15,8 +15,17 @@
 
   <ItemGroup>
     <None Remove="Controllers\" />
+    <None Remove="Contracts\" />
+    <None Remove="Contracts\Responses\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Contracts\Responses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aion.CustomerConfigService.Application\Aion.CustomerConfigService.Application.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>
