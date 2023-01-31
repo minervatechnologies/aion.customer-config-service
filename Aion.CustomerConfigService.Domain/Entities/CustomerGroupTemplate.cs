@@ -3,9 +3,9 @@ using Aion.CustomerConfigService.Domain.Enums;
 
 namespace Aion.CustomerConfigService.Domain.Entities;
 
-public class SegmentTemplate
+public class CustomerGroupTemplate
 {
-	public SegmentTemplate()
+	public CustomerGroupTemplate()
 	{
 	}
 

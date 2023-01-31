@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Aion.CustomerConfigService.Domain.Enums
 {
-	public enum SegmentInstanceEvent
+	public enum CustomerGroupSpecificationEventType
 	{
 		Enabled,
 		Disabled,

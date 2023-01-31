@@ -13,14 +13,14 @@ using Microsoft.AspNetCore.Mvc;
 namespace Aion.CustomerConfigService.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class SegmentTemplateController : ControllerBase
+    public class CustomerGroupTemplateController : ControllerBase
     {
-        private readonly IQueryHandler<GetAllSegmentTemplateQuery, IReadOnlyList<SegmentTemplate>> getAllQuery;
-        private readonly IQueryHandler<GetSegmentTemplateQuery, SegmentTemplate> getSingle;
+        private readonly IQueryHandler<GetAllSegmentTemplateQuery, IReadOnlyList<CustomerGroupTemplate>> getAllQuery;
+        private readonly IQueryHandler<GetGroupTemplateQuery, CustomerGroupTemplate> getSingle;
 
-        public SegmentTemplateController(
-            IQueryHandler<GetAllSegmentTemplateQuery, IReadOnlyList<SegmentTemplate>> getAllQuery,
-            IQueryHandler<GetSegmentTemplateQuery, SegmentTemplate> getSingle)
+        public CustomerGroupTemplateController(
+            IQueryHandler<GetAllSegmentTemplateQuery, IReadOnlyList<CustomerGroupTemplate>> getAllQuery,
+            IQueryHandler<GetGroupTemplateQuery, CustomerGroupTemplate> getSingle)
         {
             this.getAllQuery = getAllQuery;
             this.getSingle = getSingle;
@@ -36,7 +36,7 @@ namespace Aion.CustomerConfigService.Api.Controllers
                 return NotFound();
 
             var response = templates
-                .Select(s => new SegmentTemplateResponse(s.Channel, s.Yield))
+                .Select(s => new CustomerGroupTemplateResponse(s.Channel, s.LoanBroker, s.Name))
                 .ToList();
 
             return Ok(response);
@@ -46,7 +46,7 @@ namespace Aion.CustomerConfigService.Api.Controllers
         [Route("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
-            var template = await getSingle.Execute(new GetSegmentTemplateQuery(id));
+            var template = await getSingle.Execute(new GetGroupTemplateQuery(id));
             if (template is null)
                 return NotFound();
 

@@ -3,16 +3,16 @@ using Aion.CustomerConfigService.Domain.Entities;
 
 namespace Aion.CustomerConfigService.Application.Queries.Handlers;
 
-public class GetSegmentTemplateQueryHandler : IQueryHandler<GetSegmentTemplateQuery, SegmentTemplate>
+public class GetSegmentTemplateQueryHandler : IQueryHandler<GetGroupTemplateQuery, CustomerGroupTemplate>
 {
-    private readonly ISegmentTemplateRepository segmentTemplateRepository;
+    private readonly ICustomerGroupTemplateRepository segmentTemplateRepository;
 
-    public GetSegmentTemplateQueryHandler(ISegmentTemplateRepository segmentTemplateRepository)
+    public GetSegmentTemplateQueryHandler(ICustomerGroupTemplateRepository segmentTemplateRepository)
     {
         this.segmentTemplateRepository = segmentTemplateRepository;
     }
 
-    public async Task<SegmentTemplate> Execute(GetSegmentTemplateQuery query)
+    public async Task<CustomerGroupTemplate> Execute(GetGroupTemplateQuery query)
     {
         if (query is null)
             throw new ArgumentNullException(nameof(query));

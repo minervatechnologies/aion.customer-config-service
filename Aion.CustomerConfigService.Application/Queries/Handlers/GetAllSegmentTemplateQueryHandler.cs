@@ -5,16 +5,16 @@ using Aion.CustomerConfigService.Domain.Entities;
 
 namespace Aion.CustomerConfigService.Application.Queries.Handlers;
 
-public class GetAllSegmentTemplateQueryHandler : IQueryHandler<GetAllSegmentTemplateQuery, IReadOnlyList<SegmentTemplate>>
+public class GetAllSegmentTemplateQueryHandler : IQueryHandler<GetAllSegmentTemplateQuery, IReadOnlyList<CustomerGroupTemplate>>
 {
-    private readonly ISegmentTemplateRepository segmentTemplateRepository;
+    private readonly ICustomerGroupTemplateRepository segmentTemplateRepository;
 
-    public GetAllSegmentTemplateQueryHandler(ISegmentTemplateRepository segmentTemplateRepository)
+    public GetAllSegmentTemplateQueryHandler(ICustomerGroupTemplateRepository segmentTemplateRepository)
     {
         this.segmentTemplateRepository = segmentTemplateRepository;
     }
 
-    public async Task<IReadOnlyList<SegmentTemplate>> Execute(GetAllSegmentTemplateQuery query)
+    public async Task<IReadOnlyList<CustomerGroupTemplate>> Execute(GetAllSegmentTemplateQuery query)
     {
         if (query is null)
             throw new ArgumentNullException(nameof(query));
@@ -22,7 +22,7 @@ public class GetAllSegmentTemplateQueryHandler : IQueryHandler<GetAllSegmentTemp
         var templates = await segmentTemplateRepository.ListAll();
 
         if (templates is null)
-            return new List<SegmentTemplate>();
+            return new List<CustomerGroupTemplate>();
 
         return templates;
     }

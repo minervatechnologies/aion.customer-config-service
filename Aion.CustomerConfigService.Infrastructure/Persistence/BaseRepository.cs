@@ -1,27 +1,42 @@
 ﻿using System;
 using Aion.CustomerConfigService.Application.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aion.CustomerConfigService.Infrastructure.Persistence
 {
-	public class BaseRepository<T> : IAsyncRepository<T> where T : class
-	{
-		public BaseRepository()
-		{
-		}
+    public class BaseRepository<T> : IAsyncRepository<T> where T : class
+    {
+        private readonly CustomerConfigDbContext dbContext;
 
-        public Task<T> Add(T entity)
+        public BaseRepository(CustomerConfigDbContext dbContext)
         {
-            throw new NotImplementedException();
+            this.dbContext = dbContext;
         }
 
-        public Task<T> GetById(Guid id)
+        public async Task<T> Add(T entity)
         {
-            throw new NotImplementedException();
+            await dbContext.Set<T>().AddAsync(entity);
+            await dbContext.SaveChangesAsync();
+
+            return entity;
         }
 
-        public Task<IReadOnlyList<T>> ListAll()
+        public async Task<T> GetById(Guid id) =>
+            await dbContext.Set<T>().FindAsync(id);
+
+        public async Task<IReadOnlyList<T>> ListAll() =>
+            await dbContext.Set<T>().ToListAsync();
+
+        public async Task Update(T entity)
         {
-            throw new NotImplementedException();
+            dbContext.Entry(entity).State = EntityState.Modified;
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task Delete(T entity)
+        {
+            dbContext.Set<T>().Remove(entity);
+            await dbContext.SaveChangesAsync();
         }
     }
 }
