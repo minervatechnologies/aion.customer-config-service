@@ -9,6 +9,14 @@ public class CustomerGroupSpecification : BaseEntity
     {
     }
 
-    public ICollection<SegmentInstanceEvent> CustomerSegmentInstanceEvents { get; }
+    public ICollection<CustomerGroupSpecificationEvent> CustomerSegmentInstanceEvents { get; }
+    public int Yield { get; set; }
+    public int RoeRate { get; set; }
+    public int ExternalRiskScore { get; set; }
+    public bool IsActive { get; set; }
+    public bool IsEnabled { get; set; }
+
+    public Customer Customer { get; }
+    public object CustomerId { get; set; }
 }
 

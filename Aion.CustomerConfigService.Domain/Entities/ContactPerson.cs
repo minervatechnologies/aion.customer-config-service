@@ -5,8 +5,12 @@ namespace Aion.CustomerConfigService.Domain.Entities;
 
 public class ContactPerson : BaseAuditableEntity
 {
-	public ContactPerson()
-	{
-	}
+    public ContactPerson()
+    {
+    }
+
+    public string FirstName { get; }
+    public string LastName { get; }
+
 }
 

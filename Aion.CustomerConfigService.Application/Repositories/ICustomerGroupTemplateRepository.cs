@@ -5,7 +5,7 @@ namespace Aion.CustomerConfigService.Application.Repositories
 {
 	public interface ICustomerGroupTemplateRepository : IAsyncRepository<CustomerGroupTemplate>
 	{
-		
+	 
     }
 }
 

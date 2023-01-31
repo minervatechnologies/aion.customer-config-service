@@ -11,6 +11,8 @@ namespace Aion.CustomerConfigService.Infrastructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
+            builder.HasKey(e => e.Id);
+
             builder.Property(e => e.CompanyName)
                 .IsRequired();
 
