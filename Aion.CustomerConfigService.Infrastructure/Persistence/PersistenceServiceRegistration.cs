@@ -11,16 +11,15 @@ namespace Aion.CustomerConfigService.Infrastructure.Persistence
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<CustomerConfigDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("CustomerConfigConnectionString")));
-
+                options.UseNpgsql(configuration.GetConnectionString("CustomerConfigConnectionString")));
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
+            services.AddScoped<ICustomerGroupTemplateRepository, CustomerGroupTemplateRepository>();
+            services.AddScoped<ICustomerGroupSpecificationRepository, CustomerGroupSpecificationRepository>();
 
-            services.AddScoped<I>
-
+            // todo: register repositories
 
             return services;
         }
     }
 }
-

@@ -5,10 +5,6 @@ namespace Aion.CustomerConfigService.Domain.Entities;
 
 public class CustomerGroupSpecification : BaseEntity
 {
-    public CustomerGroupSpecification()
-    {
-    }
-
     public ICollection<CustomerGroupSpecificationEvent> CustomerSegmentInstanceEvents { get; }
     public int Yield { get; set; }
     public int RoeRate { get; set; }
@@ -17,6 +13,6 @@ public class CustomerGroupSpecification : BaseEntity
     public bool IsEnabled { get; set; }
 
     public Customer Customer { get; }
-    public object CustomerId { get; set; }
+    public Guid CustomerId { get; set; }
 }
 

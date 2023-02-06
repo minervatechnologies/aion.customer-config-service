@@ -5,7 +5,7 @@ namespace Aion.CustomerConfigService.Domain.Enums
 	{
 		Enabled,
 		Disabled,
-		Active,
-		Inactive
+		Activated,
+		Inactivated
 	}
 }

@@ -5,7 +5,6 @@ namespace Aion.CustomerConfigService.Domain.Entities;
 
 public class UserAccount : BaseAuditableEntity
 {
-	public UserAccount()
-	{
-	}
+
+
 }

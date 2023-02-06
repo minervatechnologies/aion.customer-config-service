@@ -5,12 +5,15 @@ namespace Aion.CustomerConfigService.Domain.Entities
 {
     public class Customer : BaseAuditableEntity
     {
-        public Customer()
+        public Customer(string organisationalNumber, string companyName)
         {
+            OrganisationalNumber = organisationalNumber;
+            CompanyName = companyName;
         }
 
-        public string OrganisationalNumber { get; set; }
-        public string CompanyName { get; set; }
+        public string OrganisationalNumber { get; }
+        public string CompanyName { get; }
+        public bool IsActive { get; }
 
         public List<CustomerGroupSpecification> CustomerGroupSpecifications { get; set; }
     }

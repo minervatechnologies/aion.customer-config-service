@@ -25,7 +25,4 @@ public class CustomerConfigDbContext : DbContext
 
         // add seed data for customer group templates
     }
-
-    public override Task<in> Save
 }
-

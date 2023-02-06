@@ -5,5 +5,10 @@ namespace Aion.CustomerConfigService.Domain.Common;
 
 public abstract class BaseEntity
 {
-    public int Id { get; set; }
+    public BaseEntity()
+    {
+        Id = Guid.NewGuid();
+    }
+
+    public Guid Id { get; }
 }

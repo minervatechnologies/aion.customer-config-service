@@ -36,7 +36,7 @@ namespace Aion.CustomerConfigService.Api.Controllers
                 return NotFound();
 
             var response = templates
-                .Select(s => new CustomerGroupTemplateResponse(s.Channel, s.LoanBroker, s.Name))
+                .Select(s => new CustomerGroupTemplateResponse(s.Channel, s.LoanBroker.Title, s.Name))
                 .ToList();
 
             return Ok(response);
@@ -50,7 +50,7 @@ namespace Aion.CustomerConfigService.Api.Controllers
             if (template is null)
                 return NotFound();
 
-            var response = new SegmentTemplateResponse(template.Channel, template.Yield);
+            var response = new CustomerGroupTemplateResponse(template.Channel, template.LoanBroker.Title, template.Name);
 
             return Ok(response);
         }

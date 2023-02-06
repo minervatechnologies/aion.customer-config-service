@@ -21,9 +21,6 @@ namespace Aion.CustomerConfigService.Infrastructure.Persistence.Configurations
                 .WithOne(co => co.Customer)
                 .HasForeignKey(co => co.CustomerId)
                 .OnDelete(DeleteBehavior.Cascade);
-
-
         }
     }
 }
-

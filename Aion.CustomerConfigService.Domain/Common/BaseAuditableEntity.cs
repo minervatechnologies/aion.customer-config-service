@@ -3,7 +3,12 @@ namespace Aion.CustomerConfigService.Domain.Common;
 
 public abstract class BaseAuditableEntity : BaseEntity
 {
-    public DateTime Created { get; set; }
+    public BaseAuditableEntity()
+    {
+        Created = DateTime.Now;
+    }
+
+    public DateTime Created { get; }
 
     public string? CreatedBy { get; set; }
 
