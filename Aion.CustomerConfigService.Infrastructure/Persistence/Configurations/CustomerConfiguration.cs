@@ -12,9 +12,12 @@ namespace Aion.CustomerConfigService.Infrastructure.Persistence.Configurations
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
             builder.HasKey(e => e.Id);
-
-            builder.Property(e => e.CompanyName)
-                .IsRequired();
+            builder.Property(e => e.Created);
+            builder.Property(e => e.CreatedBy);
+            builder.Property(e => e.LastModified);
+            builder.Property(e => e.LastModifiedBy);
+            builder.Property(e => e.CompanyName);
+            builder.Property(e => e.OrganisationalNumber);
 
             builder
                 .HasMany(c => c.CustomerGroupSpecifications)

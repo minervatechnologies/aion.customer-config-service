@@ -4,7 +4,7 @@ using Aion.CustomerConfigService.Domain.Enums;
 
 namespace Aion.CustomerConfigService.Domain.Entities
 {
-	public class LoanBroker : BaseEntity
+	public class LoanBroker : BaseAuditableEntity
 	{
 		public LoanBroker()
 		{
