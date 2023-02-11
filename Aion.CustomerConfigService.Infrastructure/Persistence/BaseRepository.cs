@@ -6,7 +6,7 @@ namespace Aion.CustomerConfigService.Infrastructure.Persistence
 {
     public class BaseRepository<T> : IAsyncRepository<T> where T : class
     {
-        private readonly CustomerConfigDbContext dbContext;
+        protected readonly CustomerConfigDbContext dbContext;
 
         public BaseRepository(CustomerConfigDbContext dbContext)
         {

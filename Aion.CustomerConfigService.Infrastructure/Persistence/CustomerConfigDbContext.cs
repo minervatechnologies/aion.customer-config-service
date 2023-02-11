@@ -1,15 +1,19 @@
 ﻿using System;
 using Aion.CustomerConfigService.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Aion.CustomerConfigService.Infrastructure.Persistence;
 
 public class CustomerConfigDbContext : DbContext
 {
-	public CustomerConfigDbContext(DbContextOptions<CustomerConfigDbContext> options)
-		: base(options)
-	{
-	}
+    protected readonly IConfiguration Configuration;
+
+    public CustomerConfigDbContext(DbContextOptions<CustomerConfigDbContext> options, IConfiguration configuration)
+        : base(options)
+    {
+        Configuration = configuration;
+    }
 
     public DbSet<ContactPerson> ContactPeople { get; set; }
     public DbSet<Customer> Customers { get; set; }
@@ -24,5 +28,10 @@ public class CustomerConfigDbContext : DbContext
             typeof(CustomerConfigDbContext).Assembly);
 
         // add seed data for customer group templates
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseNpgsql(Configuration.GetConnectionString("ConfigDatabase"));
     }
 }

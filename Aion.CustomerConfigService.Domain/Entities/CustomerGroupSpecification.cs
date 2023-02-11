@@ -15,8 +15,8 @@ public class CustomerGroupSpecification : BaseAuditableEntity
     }
 
     public ICollection<CustomerGroupSpecificationEvent> CustomerSegmentInstanceEvents { get; }
-    public int Yield { get; set; }
-    public int RoeRate { get; set; }
+    public decimal Yield { get; set; }
+    public decimal RoeRate { get; set; }
     public int ExternalRiskScore { get; set; }
     public bool IsActive { get; set; }
     public bool IsEnabled { get; set; }
