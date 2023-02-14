@@ -19,5 +19,7 @@ public class ContactPerson : BaseAuditableEntity
     public string EmailAddress { get; }
     public string Title { get;}
     public string PhoneNumber { get; }
+    public Customer Customer { get; }
+    public Guid CustomerId { get; }
 }
 

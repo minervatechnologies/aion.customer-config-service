@@ -5,7 +5,7 @@ namespace Aion.CustomerConfigService.Domain.Entities;
 
 public class CustomerGroupSpecification : BaseAuditableEntity
 {
-    public CustomerGroupSpecification(int yield, int roeRate, int externalRiskScore)
+    public CustomerGroupSpecification(decimal yield, decimal roeRate, decimal externalRiskScore)
     {
         IsActive = false;
         IsEnabled = true;
@@ -17,12 +17,12 @@ public class CustomerGroupSpecification : BaseAuditableEntity
     public ICollection<CustomerGroupSpecificationEvent> CustomerSegmentInstanceEvents { get; }
     public decimal Yield { get; set; }
     public decimal RoeRate { get; set; }
-    public int ExternalRiskScore { get; set; }
-    public bool IsActive { get; set; }
-    public bool IsEnabled { get; set; }
+    public decimal ExternalRiskScore { get;  }
+    public bool IsActive { get; }
+    public bool IsEnabled { get; }
 
     public Customer Customer { get; }
-    public Guid CustomerId { get; set; }
+    public Guid CustomerId { get; }
 
     public CustomerGroupTemplate CustomerGroupTemplate { get; }
     public Guid CustomerGroupTemplateId { get; }

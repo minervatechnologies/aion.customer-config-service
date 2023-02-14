@@ -6,11 +6,13 @@ namespace Aion.CustomerConfigService.Domain.Entities
 {
 	public class LoanBroker : BaseAuditableEntity
 	{
-		public LoanBroker()
+		public LoanBroker(LoanBrokeType title, bool isActive)
 		{
-		}
+            Title = title;
+            IsActive = isActive;
+        }
 
-		public LoanBrokerType Title { get;}
-		public bool IsActive { get; set; }
+		public LoanBrokeType Title { get;}
+        public bool IsActive { get; }
 	}
 }

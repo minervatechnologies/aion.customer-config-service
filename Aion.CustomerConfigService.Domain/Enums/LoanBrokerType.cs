@@ -1,9 +1,11 @@
 ﻿using System;
 namespace Aion.CustomerConfigService.Domain.Enums
 {
-	public enum LoanBrokerType
+	public enum LoanBrokeType
 	{
+		NotLendoNotSmarta,
 		Lendo,
-		Smarta
+		Smarta,
+		OwnChannel
 	}
 }

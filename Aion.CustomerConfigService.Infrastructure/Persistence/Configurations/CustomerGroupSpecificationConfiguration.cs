@@ -13,6 +13,9 @@ namespace Aion.CustomerConfigService.Infrastructure.Persistence.Configurations
             builder.Property(e => e.CreatedBy);
             builder.Property(e => e.LastModified);
             builder.Property(e => e.LastModifiedBy);
+            builder.Property(e => e.Yield);
+            builder.Property(e => e.RoeRate);
+            builder.Property(e => e.ExternalRiskScore);
 
             builder.HasOne(c => c.CustomerGroupTemplate)
                 .WithMany(e => e.CustomerGroupSpecifications)

@@ -2,5 +2,5 @@
 
 namespace Aion.CustomerConfigService.Application.Queries;
 
-public record GetCustomerGroupSpecificationQuery(Guid CustomerId, LoanBrokerType LoanBrokerType) : IQuery;
+public record GetCustomerGroupSpecificationQuery(Guid CustomerId, LoanBrokeType LoanBrokerType) : IQuery;
 

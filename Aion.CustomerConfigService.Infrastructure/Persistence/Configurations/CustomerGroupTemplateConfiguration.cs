@@ -14,6 +14,9 @@ namespace Aion.CustomerConfigService.Infrastructure.Persistence.Configurations
             builder.Property(e => e.LastModified);
             builder.Property(e => e.LastModifiedBy);
             builder.Property(e => e.Channel);
+            builder.Property(e => e.Name);
+            builder.Property(e => e.IsActive);
+            builder.Property(e => e.LoanBrokerId);
         }
     }
 }

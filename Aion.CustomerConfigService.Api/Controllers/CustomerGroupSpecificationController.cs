@@ -24,7 +24,7 @@ namespace Aion.CustomerConfigService.Api.Controllers
         }
 
         [Route("/loanbroker")]
-        public async Task<IActionResult> GetByLoanBroker(LoanBrokerType loanBroker)
+        public async Task<IActionResult> GetByLoanBroker(LoanBrokeType loanBroker)
         {
             // get customer id from token
             try

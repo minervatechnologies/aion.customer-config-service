@@ -24,6 +24,18 @@ namespace Aion.CustomerConfigService.Infrastructure.Persistence.Configurations
                 .WithOne(co => co.Customer)
                 .HasForeignKey(co => co.CustomerId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder
+                .HasMany(c => c.AccountGroups)
+                .WithOne(co => co.Customer)
+                .HasForeignKey(co => co.CustomerId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder
+                .HasOne(c => c.ContactPerson)
+                .WithOne(contactPerson => contactPerson.Customer)
+                .HasForeignKey<ContactPerson>(contactPerson => contactPerson.Id)
+                .IsRequired(false);
         }
     }
 }

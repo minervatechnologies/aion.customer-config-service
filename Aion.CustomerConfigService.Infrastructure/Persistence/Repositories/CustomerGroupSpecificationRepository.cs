@@ -13,7 +13,7 @@ public class CustomerGroupSpecificationRepository : BaseRepository<CustomerGroup
     {
     }
 
-    public async Task<CustomerGroupSpecification?> GetByIdAndLoanBroker(Guid customerId, LoanBrokerType loanBrokerType) =>
+    public async Task<CustomerGroupSpecification?> GetByIdAndLoanBroker(Guid customerId, LoanBrokeType loanBrokerType) =>
         await dbContext
          .CustomerGroupSpecifications
          .SingleOrDefaultAsync(

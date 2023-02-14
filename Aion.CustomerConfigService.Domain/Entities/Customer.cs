@@ -16,6 +16,17 @@ namespace Aion.CustomerConfigService.Domain.Entities
         public bool IsActive { get; }
 
         public List<CustomerGroupSpecification> CustomerGroupSpecifications { get; set; }
+        public List<AccountGroup> AccountGroups { get; }
+
+
+        public ContactPerson ContactPerson { get; private set; }
+        public Guid ContactPersonId { get; }
+
+        public void AddContactPerson(ContactPerson contactPerson)
+        {
+            if(ContactPerson is null)
+                ContactPerson = contactPerson;
+        }
     }
 }
 
